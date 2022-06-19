@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  workspace:
+    build:
+      context: /
+    ports: 
+      - "3000:3000"
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    user: "vscode"
