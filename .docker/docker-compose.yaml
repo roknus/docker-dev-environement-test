@@ -2,16 +2,15 @@ version: "3.7"
 services:
   workspace-service:
     build:
-      context: .
+      context: ./service
     ports: 
       - "3000:3000"
     stdin_open: true # docker run -i
     tty: true        # docker run -t
-  #workspace-wasmtime:
-  #  build:
-  #    context: ./wasmtime
-  #  ports: 
-  #    - "3001:3000"
-  #  stdin_open: true # docker run -i
-  #  tty: true        # docker run -t
-  #  user: 'emscripten'
+  workspace-wasmtime:
+    build:
+      context: ./wasmtime
+    ports: 
+      - "3001:3000"
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
