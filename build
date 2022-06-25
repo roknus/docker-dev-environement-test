@@ -1,0 +1,3 @@
+#!/bin/bash
+
+emcc -lembind -o dist/quick_example.js quick_example.cpp

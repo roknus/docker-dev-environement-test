@@ -1,0 +1,3 @@
+#!/bin/bash
+
+emcc -o dist/helloworld.wasm src/helloworld.cpp
